@@ -13,3 +13,5 @@ app.get("/*", function (req, res) {
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+// The `functions` property cannot be used in conjunction with the `builds` property. Please remove one of them.
