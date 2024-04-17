@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "node@14"
+    }
+  },
+  "routes": [
+    {
+      "src": "/build/(.*)",
+      "dest": "build/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "api/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "build/*",
+      "use": "@vercel/static"
+    }
+  ]
+}
